@@ -8,6 +8,7 @@ import {
   SiTailwindcss,
 } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -23,6 +24,7 @@ const iconVariants = (duration) => ({
 });
 
 export default function Technologies() {
+  const { t } = useTranslation();
   return (
     <div className="pb-24">
       <motion.h2
@@ -32,7 +34,7 @@ export default function Technologies() {
         transition={{ duration: 1.5 }}
         className="my-20 text-center text-4xl"
       >
-        Technologies
+        {t("technologies")}
       </motion.h2>
       <motion.div
         variants={iconVariants}
