@@ -4,8 +4,12 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
+import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
 
-export default function Contact() {
+export default function Contact({ lightMode }) {
+  const { t } = useTranslation();
+
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -53,7 +57,7 @@ export default function Contact() {
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
         >
-          Get in touch!
+          {t("getintouch")}
         </motion.h2>
 
         <div className="text-center tracking-tighter">
@@ -81,13 +85,13 @@ export default function Contact() {
           className="mx-auto mt-4 max-w-md p-5 rounded-lg shadow-md"
         >
           <label className="block mb-2 text-sm font-semibold text-gray-700">
-            Name
+            {t("name")}
           </label>
           <input
             type="text"
             name="user_name"
             className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-neutral-600 focus:ring-purple-900"
-            placeholder="Enter your name"
+            placeholder={t("enteryourname")}
           />
           <label className="block mb-2 text-sm font-semibold text-gray-700">
             Email
@@ -96,24 +100,33 @@ export default function Contact() {
             type="email"
             name="user_email"
             className="w-full p-3 mb-4 border border-gray-300 rounded-lg text-neutral-600 focus:outline-none focus:ring-2 focus:ring-purple-900"
-            placeholder="Enter your email"
+            placeholder={t("enteryouremail")}
           />
           <label className="block mb-2 text-sm font-semibold text-gray-700">
-            Message
+            {t("message")}
           </label>
           <textarea
             name="message"
             className="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 text-neutral-600 focus:ring-purple-900"
-            placeholder="Write your message"
+            placeholder={t("writeyourmessage")}
             rows="4"
           />
           <input
             type="submit"
-            value="Send"
-            className="w-full py-2 text-white bg-transparent border-white border-2 rounded-lg hover:bg-white hover:text-black transition duration-200 cursor-pointer"
+            value={t("send")}
+            className={`w-full py-2 border-2 rounded-lg cursor-pointer transition duration-200 
+    ${
+      lightMode
+        ? "bg-white text-neutral-500 border-neutral-200 hover:bg-neutral-200 hover:text-white"
+        : "bg-transparent text-white border-white hover:bg-white hover:text-black"
+    }`}
           />
         </form>
       </div>
     </>
   );
 }
+
+Contact.propTypes = {
+  lightMode: PropTypes.bool.isRequired,
+};

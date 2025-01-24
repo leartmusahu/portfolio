@@ -1,9 +1,18 @@
 {
   "subtitle": "Zhvillues Softuerësh",
-  "heroContent": "Jam 22 vjeç me një pasion për zhvillimin e aplikacioneve. Me mbi 2 vite përvojë praktike, kam përmirësuar aftësitë e mia në teknologjitë e front-end si React, si dhe në teknologjitë e back-end si Node.js, MySQL dhe MongoDB. Qëllimi im është të përdor ekspertizën time për të krijuar zgjidhje inovative që nxisin rritjen e biznesit dhe ofrojnë përvoja të jashtëzakonshme për përdoruesit.",
+  "heroContent": "Jam një zhvillues softuerësh 22-vjeçar me pasion për zhvillimin e aplikacioneve te web-it me më shumë se 2 vjet eksperiencë, kam përvetësuar aftësi në teknologji front-end si React, si dhe teknologji back-end si Node.js, MySQL dhe MongoDB. Pasioni im është të krijoj zgjidhje inovative që nxisin rritjen e biznesit dhe ofrojnë përvoja të jashtëzakonshme për përdoruesit. Qëllimi im është të vazhdoj të shfrytëzoj aftësitë e mia për të kontribuar në suksesin e projekteve dhe grupeve dinamike.",
   "downloadCV": "Shkarko CV",
   "technologies": "Teknologjitë",
   "projects": "Projektet",
-  "med": "Aplikacion Medikal i Uebit",
-  "med-description": "Një aplikacion medikal per menaxhimin e termineve dhe menaxhimin e puneve te doktorit dhe adminit."
+  "experience": "Eksperienca",
+  "months": "Nëntor 2024 - Janar 2025",
+  "getintouch": "Kontakto!",
+  "name": "Emri",
+  "enteryourname": "Shëno emrin tënd",
+  "email": "Email",
+  "enteryouremail": "Shëno email-in tënd",
+  "message": "Mesazhi",
+  "writeyourmessage": "Shëno mesazhin tënd",
+  "send": "Dërgo",
+  "exp-description": "Bashkëpunimi me ekipin e zhvillimit për të krijuar dhe mbajtur aplikacione mobile cross-platform duke përdorur Ionic framework. Zhvillimi i faqeve responsive dhe dinamike. Asistimi në projektimin dhe implementimin e API-ve dhe shërbimeve backend duke përdorur .NET Core. Punimi në integrimin e API-ve me aplikacionet front-end"
 }

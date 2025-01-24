@@ -2,7 +2,7 @@ import { useState } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
-import ProjectModal from "./ProjectModal"; // Import the modal component
+import ProjectModal from "./ProjectModal";
 
 export default function Projects() {
   const { t } = useTranslation();
@@ -38,7 +38,7 @@ export default function Projects() {
           <motion.div
             key={index}
             className="flex flex-wrap justify-center cursor-pointer"
-            onClick={() => openModal(project)} // Open the modal when clicked
+            onClick={() => openModal(project)}
             variants={{
               hidden: { opacity: 0, y: 50 },
               show: {

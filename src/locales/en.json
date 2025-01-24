@@ -1,9 +1,18 @@
 {
   "subtitle": "Software Developer",
-  "heroContent": "I am 22 years old with a passion for software development, with a knack for crafting robust and scalable web applications. With 2+ years of hands-on experience, I have honed my skills in front-end technologies like React, as well as back-end technologies like Node.js, MySQL, and MongoDB. My goal is to leverage my expertise to create innovative solutions that drive business growth and deliver exceptional user experiences.",
+  "heroContent": "I am a 22-year-old passionate Software Developer with over 2 years of hands-on experience in building web applications. My expertise spans both front-end technologies like React and back-end technologies such as Node.js, MySQL, and MongoDB. I am dedicated to crafting innovative solutions that drive business growth and deliver exceptional user experiences. My goal is to continuously leverage my skills to contribute to the success of dynamic projects and teams.",
   "downloadCV": "Download CV",
   "technologies": "Technologies",
   "projects": "Projects",
-  "med": "Medical Web Application",
-  "med-description": "A medical application for booking appointments and managing admin and doctor workflows."
+  "experience": "Experience",
+  "months": "November 2024 - January 2025",
+  "getintouch": "Get in touch!",
+  "name": "Name",
+  "enteryourname": "Enter your name",
+  "email": "Email",
+  "enteryouremail": "Enter your email",
+  "message": "Message",
+  "writeyourmessage": "Write your message",
+  "send": "Send",
+  "exp-description": "Collaborated with the development team to create and maintain cross-platform mobile applications using the Ionic framework. Developed responsive and dynamic user interfaces using Angular. Assisted in designing and implementing APIs and backend services using .NET Core. Worked on integrating APIs with the frontend applications."
 }

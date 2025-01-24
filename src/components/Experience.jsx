@@ -1,7 +1,10 @@
 import { EXPERIENCES } from "../constants";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Experience() {
+  const { t } = useTranslation();
+
   return (
     <div className="pb-4">
       <motion.h2
@@ -10,7 +13,7 @@ export default function Experience() {
         transition={{ duration: 0.5 }}
         className="my-20 text-center text-4xl"
       >
-        Experience
+        {t("experience")}
       </motion.h2>
 
       <div>
@@ -25,7 +28,7 @@ export default function Experience() {
               transition={{ duration: 1 }}
               className="w-full lg:w-1/4"
             >
-              <p className="mb-2 text-sm text-stone-400">{experience.year}</p>
+              <p className="mb-2 text-sm text-stone-400">{t("months")}</p>
             </motion.div>
             <motion.div
               whileInView={{ opacity: 1, x: 0 }}
@@ -40,7 +43,7 @@ export default function Experience() {
                   {experience.company}{" "}
                 </span>
               </h3>
-              <p className="mb-4 text-stone-400">{experience.description}</p>
+              <p className="mb-4 text-stone-400">{t("exp-description")}</p>
               {experience.technologies.map((tech, index) => (
                 <span
                   className="mr-2 mt-4 rounded bg-neutral-800 px-2 py-1 text-sm font-medium text-stone-300"

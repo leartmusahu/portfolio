@@ -1,7 +1,7 @@
 import profilePic from "../assets/12.png";
-// import { HERO_CONTENT } from "../constants";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 
 const containerVariants = {
   hidden: { opacity: 0, x: -100 },
@@ -19,7 +19,7 @@ const childVariants = {
   hidden: { opacity: 0, x: -100 },
   visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
 };
-export default function Hero() {
+export default function Hero({ lightMode }) {
   const { t } = useTranslation();
   return (
     <div className="pb-4 lg:mb-36 m-8">
@@ -67,7 +67,11 @@ export default function Hero() {
             target="_blank"
             rel="noopener noreferrer"
             download
-            className="bg-white rounded-full p-4 text-sm text-stone-800"
+            className={`${
+              lightMode
+                ? "bg-neutral-200 rounded-full p-4 text-sm text-stone-800 hover:bg-transparent hover:border-2 hover:text-neutral-600"
+                : "bg-white rounded-full p-4 text-sm text-stone-800 hover:bg-transparent  hover:border-2 hover:text-white"
+            }`}
           >
             {t("downloadCV")}
           </motion.a>
@@ -76,3 +80,7 @@ export default function Hero() {
     </div>
   );
 }
+
+Hero.propTypes = {
+  lightMode: PropTypes.bool.isRequired,
+};
