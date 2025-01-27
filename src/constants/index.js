@@ -31,6 +31,7 @@ import scr80 from "../assets/projects/Screenshot (80).png";
 import scr81 from "../assets/projects/Screenshot (81).png";
 import scr82 from "../assets/projects/Screenshot (82).png";
 import scr84 from "../assets/projects/Screenshot (84).png";
+import scr1111 from "../assets/projects/7CE9F2F3-6900-4E46-9469-3C27A6C5176A.jpeg";
 
 import scr106 from "../assets/projects/Screenshot (106).png";
 import scr107 from "../assets/projects/Screenshot (107).png";
@@ -43,6 +44,17 @@ import scr115 from "../assets/projects/Screenshot (115).png";
 import scr116 from "../assets/projects/Screenshot (116).png";
 import scr117 from "../assets/projects/Screenshot (117).png";
 import scr118 from "../assets/projects/Screenshot (118).png";
+
+import scr170 from "../assets/projects/Screenshot (170).png";
+import scr171 from "../assets/projects/Screenshot (171).png";
+import scr172 from "../assets/projects/Screenshot (172).png";
+import scr173 from "../assets/projects/Screenshot (173).png";
+import scr174 from "../assets/projects/Screenshot (174).png";
+import scr175 from "../assets/projects/Screenshot (175).png";
+import scr176 from "../assets/projects/Screenshot (176).png";
+import scr177 from "../assets/projects/Screenshot (177).png";
+import scr178 from "../assets/projects/Screenshot (178).png";
+import scr179 from "../assets/projects/Screenshot (179).png";
 
 export const HERO_CONTENT = `I am a 22-year-old passionate software developer with over 2 years of hands-on experience in building robust, scalable web applications. My expertise spans both front-end technologies like React and back-end technologies such as Node.js, MySQL, and MongoDB. I am dedicated to crafting innovative solutions that drive business growth and deliver exceptional user experiences. My goal is to continuously leverage my skills to contribute to the success of dynamic projects and teams.`;
 
@@ -122,6 +134,26 @@ export const PROJECTS = [
       scr116,
       scr117,
       scr118,
+    ],
+  },
+
+  {
+    title: "My Business",
+    image: scr1111,
+    description:
+      "A business mobile application that fetches real-time business data from using API-s and presents it in an easy-to-navigate interface.",
+    technologies: ["Ionic"],
+    moreImages: [
+      scr170,
+      scr171,
+      scr172,
+      scr173,
+      scr174,
+      scr175,
+      scr176,
+      scr177,
+      scr178,
+      scr179,
     ],
   },
 ];

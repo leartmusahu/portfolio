@@ -55,10 +55,10 @@ export default function ProjectModal({ project, closeModal }) {
                   <img
                     src={image}
                     alt={`Project image ${index + 1}`}
-                    className="w-full rounded-lg"
+                    className="w-full max-h-[600px] rounded-lg object-contain"
                     style={{
-                      maxHeight: "600px",
-                      objectFit: "cover",
+                      maxWidth: "100%",
+                      objectFit: "contain",
                     }}
                   />
                 </div>
