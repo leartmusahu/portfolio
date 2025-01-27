@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { PROJECTS } from "../constants";
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
@@ -8,6 +8,9 @@ export default function Projects() {
   const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
 
+  // Refs for slider scroll
+  const sliderRef = useRef(null);
+
   const openModal = (project) => {
     setSelectedProject(project);
   };
@@ -16,8 +19,20 @@ export default function Projects() {
     setSelectedProject(null);
   };
 
+  const scrollLeft = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: -200, behavior: "smooth" });
+    }
+  };
+
+  const scrollRight = () => {
+    if (sliderRef.current) {
+      sliderRef.current.scrollBy({ left: 200, behavior: "smooth" });
+    }
+  };
+
   return (
-    <div className="pb-12">
+    <div className="pb-12 relative">
       <motion.h2
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: -50 }}
@@ -28,11 +43,16 @@ export default function Projects() {
         {t("projects")}
       </motion.h2>
 
+      <div className="text-sm font-normal text-center mb-4 sm:hidden block">
+        Swipe to see all the projects!
+      </div>
+
       <motion.div
+        ref={sliderRef}
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.2 }}
-        className="overflow-x-auto flex gap-6 py-8"
+        className="overflow-x-auto flex gap-6 pb-4 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-gray-200"
       >
         {PROJECTS.map((project, index) => (
           <motion.div
@@ -110,6 +130,44 @@ export default function Projects() {
           </motion.div>
         ))}
       </motion.div>
+
+      <div className="absolute top-1/2 left-4 transform -translate-y-1/2 z-10 sm:hidden block">
+        <button className=" text-black p-4 rounded-full  " onClick={scrollLeft}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m18.75 4.5-7.5 7.5 7.5 7.5m-6-15L5.25 12l7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div className="absolute top-1/2 right-4 transform -translate-y-1/2 z-10 sm:hidden block">
+        <button className=" text-black p-4 rounded-full " onClick={scrollRight}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="size-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m5.25 4.5 7.5 7.5-7.5 7.5m6-15 7.5 7.5-7.5 7.5"
+            />
+          </svg>
+        </button>
+      </div>
 
       {selectedProject && (
         <ProjectModal project={selectedProject} closeModal={closeModal} />
