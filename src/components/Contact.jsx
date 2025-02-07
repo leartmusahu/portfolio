@@ -52,7 +52,7 @@ export default function Contact({ lightMode }) {
       <ToastContainer />
       <div className="border-t border-stone-900 pb-20 w-full">
         <motion.h2
-          className="my-10 text-center text-4xl font-bold"
+          className="my-10 text-center text-4xl"
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -100 }}
           transition={{ duration: 1 }}
@@ -60,9 +60,9 @@ export default function Contact({ lightMode }) {
           {t("getintouch")}
         </motion.h2>
 
-        <div className="text-center tracking-tighter">
+        <div className="text-center">
           <motion.p
-            className="text-lg font-medium"
+            className="text-lg"
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
             transition={{ duration: 1 }}
@@ -70,7 +70,7 @@ export default function Contact({ lightMode }) {
             {CONTACT.phoneNo}
           </motion.p>
           <motion.p
-            className="text-lg font-medium"
+            className="text-lg "
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
             transition={{ duration: 1 }}

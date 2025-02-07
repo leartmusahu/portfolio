@@ -8,7 +8,6 @@ export default function Projects() {
   const { t } = useTranslation();
   const [selectedProject, setSelectedProject] = useState(null);
 
-  // Refs for slider scroll
   const sliderRef = useRef(null);
 
   const openModal = (project) => {
@@ -38,7 +37,7 @@ export default function Projects() {
         initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.5 }}
-        className="my-20 text-center text-4xl font-bold"
+        className="my-20 text-center text-4xl"
       >
         {t("projects")}
       </motion.h2>
